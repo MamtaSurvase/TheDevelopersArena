@@ -1,0 +1,2 @@
+No external libraries required.
+This project is built using HTML only.
