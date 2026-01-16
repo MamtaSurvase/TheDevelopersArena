@@ -94,12 +94,6 @@ The following screenshots demonstrate the working of the portfolio website:
 
 ---
 
-## ✅ **Conclusion**
-
-The project successfully meets all Week 1 technical requirements.
-It demonstrates a clear understanding of HTML fundamentals, semantic structure, and webpage organization.
-This portfolio website provides a strong base for further enhancement using CSS and JavaScript in future weeks.
-
 
 ## 🚀 How to Run the Project
 1. Download or clone the repository
@@ -107,3 +101,14 @@ This portfolio website provides a strong base for further enhancement using CSS 
 
 ## 👩‍💻 Author
 Mamta Survase
+
+
+## ✅ **Conclusion**
+
+The project successfully meets all Week 1 technical requirements.
+It demonstrates a clear understanding of HTML fundamentals, semantic structure, and webpage organization.
+This portfolio website provides a strong base for further enhancement using CSS and JavaScript in future weeks.
+
+
+
+
