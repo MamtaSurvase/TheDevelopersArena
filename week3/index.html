@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mamta Survase | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Mamta Survase</h1>
+    <p id="typingText"></p>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="darkToggle">
+            <span class="slider"></span>
+        </label>
+        <span>Dark Mode</span>
+    </div>
+</header>
+
+<main>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-img">
+                <img src="images/profile.jpg" alt="Profile">
+            </div>
+            <div class="about-info">
+                <h2>About Me</h2>
+                <p>Hello! I am <span class="highlight">Mamta Survase</span>, a beginner <span class="highlight">Web Developer</span> passionate about creating interactive websites.</p>
+                <p id="moreAbout" class="hidden">
+                    I love animations, responsive design, and experimenting with new web technologies to enhance user experience.
+                </p>
+                <button id="toggleAbout">Read More</button>
+                <a href="images/resume.pdf" download class="resume-btn">📄 Download My Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill" data-desc="I can structure web pages with HTML">
+                <span class="skill-name">HTML</span>
+                <div class="bar"><div class="progress html"></div></div>
+            </div>
+            <div class="skill" data-desc="I can style websites beautifully using CSS">
+                <span class="skill-name">CSS</span>
+                <div class="bar"><div class="progress css"></div></div>
+            </div>
+            <div class="skill" data-desc="I can make websites interactive with JavaScript">
+                <span class="skill-name">JavaScript</span>
+                <div class="bar"><div class="progress js"></div></div>
+            </div>
+        </div>
+        <div class="skill-tooltip" id="skillTooltip"></div>
+    </section>
+
+    <!-- IMAGE SLIDER -->
+    <section id="projects" class="slider-section">
+        <h2>My Projects</h2>
+        <div class="slider-container">
+            <button id="prev">&lt;</button>
+            <img id="sliderImage" src="images/project1.jpg" alt="Project">
+            <button id="next">&gt;</button>
+        </div>
+    </section>
+
+    <!-- TODO LIST -->
+    <section id="todo" class="todo-section">
+        <h2>My To-Do List</h2>
+        <div class="todo-container">
+            <input type="text" id="todoInput" placeholder="Add a task">
+            <button id="addTodo">Add</button>
+            <ul id="todoList"></ul>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="email" id="email" placeholder="Your Email">
+                <textarea id="message" placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+                <p id="formMsg"></p>
+            </form>
+            <div class="contact-info">
+                <h3>Reach Me At</h3>
+                <p>📧 Email: <a href="mailto:mamta@example.com">mamta@example.com</a></p>
+                <p>📞 Phone: +91 1234567890</p>
+                <p>🌐 LinkedIn: <a href="#">linkedin.com/mamta</a></p>
+                <p>📍 Location: Pune, India</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Mamta Survase | Portfolio Website</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
