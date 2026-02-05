@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+<h1>FlavourHub</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="menu.html">Menu</a>
+<a href="gallery.html">Gallery</a>
+<a href="booking.html">Book Table</a>
+</nav>
+<button class="theme-btn" onclick="toggleTheme()">🌙</button>
+</header>
+
+<section class="menu">
+<h2>Signature Dishes</h2>
+<input
+  type="text"
+  id="menuSearch"
+  placeholder="🔍 Search dishes..."
+  onkeyup="searchMenu()"
+  class="menu-search"
+/>
+
+<select class="price-sort" onchange="sortMenu(this.value)">
+  <option value="">Sort by Price</option>
+  <option value="low">Low to High</option>
+  <option value="high">High to Low</option>
+</select>
+
+<p class="menu-categories">
+  <button onclick="filterMenu('all')">All</button>
+  <button onclick="filterMenu('italian')">🍕 Italian</button>
+  <button onclick="filterMenu('veg')">🥗 Veg</button>
+  <button onclick="filterMenu('nonveg')">🍗 Non-Veg</button>
+  <button onclick="filterMenu('fast')">🍔 Fast Food</button>
+  <button onclick="filterMenu('dessert')">🍰 Desserts</button>
+</p>
+
+<div class="menu-grid">
+
+  <div class="menu-card italian">
+  <img src="images/italian1.jpg">
+  <h3>Italian Pizza</h3>
+  <p>₹320</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card italian">
+  <img src="images/italian2.jpg">
+  <h3>Pasta Alfredo</h3>
+  <p>₹280</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card italian">
+  <img src="images/italian3.jpg">
+  <h3>Lasagna</h3>
+  <p>₹350</p>
+ <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card italian">
+  <img src="images/italian4.jpg">
+  <h3>Garlic Bread</h3>
+  <p>₹180</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card italian">
+  <img src="images/italian5.jpg">
+  <h3>Risotto</h3>
+  <p>₹300</p>
+ <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card italian">
+  <img src="images/italian6.jpg">
+  <h3>Bruschetta</h3>
+  <p>₹220</p>
+ <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card veg">
+  <img src="images/veg1.jpg">
+  <h3>Paneer Tikka</h3>
+  <p>₹300</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+</div>
+
+<div class="menu-card veg">
+  <img src="images/veg2.jpg">
+  <h3>Veg Biryani</h3>
+  <p>₹350</p>
+ <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card veg">
+  <img src="images/veg3.jpg">
+  <h3>Veg Curry</h3>
+  <p>₹250</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card veg">
+  <img src="images/veg4.jpg">
+  <h3>Salad Bowl</h3>
+  <p>₹200</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+</div>
+
+<div class="menu-card veg">
+  <img src="images/veg5.jpg">
+  <h3>Veg Wrap</h3>
+  <p>₹180</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card veg">
+  <img src="images/veg6.jpg">
+  <h3>Veg Thali</h3>
+  <p>₹280</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card nonveg">
+  <img src="images/nonveg1.jpg">
+  <h3>Chicken Biryani</h3>
+  <p>₹420</p>
+ <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card nonveg">
+  <img src="images/nonveg2.jpg">
+  <h3>Grilled Chicken</h3>
+  <p>₹450</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card nonveg">
+  <img src="images/nonveg3.jpg">
+  <h3>Chicken Curry</h3>
+  <p>₹380</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card nonveg">
+  <img src="images/nonveg4.jpg">
+  <h3>Fish Fry</h3>
+  <p>₹400</p>
+ <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card nonveg">
+  <img src="images/nonveg5.jpg">
+  <h3>Mutton Masala</h3>
+  <p>₹520</p>
+  <<div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+</div>
+
+<div class="menu-card nonveg">
+  <img src="images/nonveg6.jpg">
+  <h3>Chicken Wings</h3>
+  <p>₹300</p>
+ <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card fast">
+  <img src="images/fast1.jpg">
+  <h3>Cheese Burger</h3>
+  <p>₹220</p>
+ <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card fast">
+  <img src="images/fast2.jpg">
+  <h3>French Fries</h3>
+  <p>₹120</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card fast">
+  <img src="images/fast3.jpg">
+  <h3>Sandwich</h3>
+  <p>₹180</p>
+ <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card fast">
+  <img src="images/fast4.jpg">
+  <h3>Hot Dog</h3>
+  <p>₹200</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card fast">
+  <img src="images/fast5.jpg">
+  <h3>Nuggets</h3>
+  <p>₹250</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card fast">
+  <img src="images/fast6.jpg">
+  <h3>Pizza Slice</h3>
+  <p>₹150</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+</div>
+
+<div class="menu-card dessert">
+  <img src="images/dessert1.jpg">
+  <h3>Chocolate Cake</h3>
+  <p>₹180</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card dessert">
+  <img src="images/dessert2.jpg">
+  <h3>Ice Cream</h3>
+  <p>₹150</p>
+ <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card dessert">
+  <img src="images/dessert3.jpg">
+  <h3>Brownie</h3>
+  <p>₹200</p>
+ <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card dessert">
+  <img src="images/dessert4.jpg">
+  <h3>Gulab Jamun</h3>
+  <p>₹120</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card dessert">
+  <img src="images/dessert5.jpg">
+  <h3>Cheesecake</h3>
+  <p>₹220</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+
+</div>
+
+<div class="menu-card dessert">
+  <img src="images/dessert6.jpg">
+  <h3>Fruit Tart</h3>
+  <p>₹190</p>
+  <div class="rating">
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star active">★</span>
+  <span class="star">★</span>
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Mamta | FlavourHub Restaurant</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

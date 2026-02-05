@@ -1,0 +1,687 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Page load animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
+
+.header {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-size: 24px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: crimson;
+}
+
+/* Dark/Light toggle button */
+.theme-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+/* =========================
+   HERO SECTION FIXED
+========================= */
+
+.hero {
+  position: relative;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("../images/hero-bg.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 140px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 48px; /* bigger for readability */
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* added shadow */
+}
+
+.hero p {
+  font-size: 22px; /* bigger subheading */
+  max-width: 700px;
+  margin: 0 auto 25px auto;
+  line-height: 1.6;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7); /* added shadow */
+}
+
+/* Hero button */
+/* Hero Section Button */
+.hero .btn {
+  font-size: 20px;           /* Bigger, readable */
+  font-weight: 600;           /* Bold text */
+  padding: 16px 40px;         /* Larger click area */
+  border-radius: 8px;         /* Smooth rounded corners */
+  background-color: #c0392b;  /* Premium dark red */
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* adds depth */
+}
+
+.hero .btn:hover {
+  background-color: #e74c3c;  /* Slightly brighter on hover */
+  transform: scale(1.1);       /* Slight zoom effect */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5); /* stronger shadow on hover */
+}
+
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   FEATURES / CARDS
+========================= */
+
+.features {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #f4f4f4;
+  padding: 25px;
+  width: 30%;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   ABOUT IMAGES
+========================= */
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+  padding: 80px 20px;
+  background: #fafafa;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #c0392b;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.about-content .btn {
+  margin-top: 15px;
+}
+
+/* About Section Reserve Button */
+.about-content .btn {
+  font-size: 20px;           /* Matches hero button */
+  font-weight: 600;
+  padding: 16px 40px;        /* Bigger click area */
+  border-radius: 8px;
+  background-color: #c0392b; /* Premium red color */
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Adds depth */
+}
+
+.about-content .btn:hover {
+  background-color: #e74c3c; /* Brighter on hover */
+  transform: scale(1.1);      /* Slight zoom */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+}
+
+.about-content .btn::after {
+  content: " ➔";
+  transition: transform 0.3s;
+}
+
+.about-content .btn:hover::after {
+  transform: translateX(5px);
+}
+
+/* RESPONSIVE FOR MOBILE */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+}
+
+
+/* =========================
+   MENU PAGE
+========================= */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.menu-card {
+  background-color: #ffe4e1;
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* MENU CARD HOVER EFFECT */
+.menu-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.menu-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.menu-card img {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover img {
+  transform: scale(1.1);
+}
+
+
+/* =========================
+   GALLERY PAGE
+========================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   BOOKING FORM
+========================= */
+
+.booking form {
+  max-width: 420px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking input,
+.booking button {
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.booking input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.booking button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.booking button:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .header,
+.dark-mode footer {
+  background-color: #000;
+}
+
+.dark-mode .card,
+.dark-mode .menu-card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-mode nav a {
+  color: white;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+}
+
+/* ACTIVE NAV LINK */
+nav a.active {
+  color: crimson;
+  border-bottom: 2px solid crimson;
+}
+
+/* ACTIVE NAV LINK */
+nav a.active {
+  color: crimson;
+  border-bottom: 2px solid crimson;
+}
+
+/* SCROLL REVEAL */
+/* Scroll animation class */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MESSAGE BOX */
+.message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  z-index: 999;
+  animation: slideIn 0.5s ease;
+}
+
+.message.success {
+  background-color: green;
+}
+
+.message.error {
+  background-color: crimson;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+.booking {
+  background: #fafafa;
+}
+
+.booking-sub {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.booking form {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.booking label {
+  text-align: left;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.booking textarea,
+.booking select {
+  padding: 12px;
+  font-size: 16px;
+  margin: 8px 0 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.dark-mode .booking form {
+  background: #1e1e1e;
+}
+
+
+
+.menu-categories {
+  margin-bottom: 25px;
+}
+
+.menu-categories button {
+  margin: 5px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  background: crimson;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.menu-categories button:hover {
+  background: darkred;
+}
+
+
+
+/* MENU SEARCH BAR */
+.menu-search {
+  width: 60%;
+  max-width: 400px;
+  padding: 12px 16px;
+  margin: 15px auto 25px;
+  display: block;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.menu-search:focus {
+  border-color: crimson;
+  box-shadow: 0 0 5px rgba(220, 20, 60, 0.5);
+}
+
+@media (max-width: 600px) {
+  .menu-search {
+    width: 90%;
+  }
+}
+
+
+/* PRICE SORT DROPDOWN */
+.price-sort {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.price-sort:focus {
+  outline: none;
+  border-color: crimson;
+}
+
+/* RATING STARS */
+.rating {
+  font-size: 18px;
+  color: #ccc;
+  margin-top: 8px;
+}
+
+.rating::before {
+  content: "★★★★★";
+}
+
+.rating {
+  position: relative;
+  display: inline-block;
+}
+
+.rating::after {
+  content: "★★★★★";
+  color: gold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--rating) / 5 * 100%);
+  overflow: hidden;
+}
+
+.gallery-subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* CHEF SPECIAL */
+.chef-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-bottom: 70px;
+}
+
+.chef-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.4s;
+}
+
+.chef-card:hover {
+  transform: translateY(-8px);
+}
+
+.chef-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.chef-info {
+  padding: 18px;
+}
+
+.chef-info h3 {
+  margin-bottom: 8px;
+  color: crimson;
+}
+
+/* CUSTOMER MOMENTS */
+.moments-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.moment-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.moment-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.moment-card span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+}
+
+.moment-card:hover img {
+  transform: scale(1.08);
+}
